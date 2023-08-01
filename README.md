@@ -2,6 +2,7 @@
  This project is about a social media networking site .
 
 Functionality
+
 Base
 Login / Logout
 Register
