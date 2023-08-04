@@ -4,9 +4,7 @@
 [![CircleCI](https://circleci.com/gh/dmcheremisin/SpringBootSocialNetwork.svg?style=svg&circle-token=54d82edd98892db8d4e69740d9bee65e48242495)](https://circleci.com/gh/dmcheremisin/SpringBootSocialNetwork)
 
 ## Introduction
-This project is a continuation of the previous one. The previous project was made with pure Servlets and JSP
- technologies [details here](https://github.com/dmcheremisin/SocialNetwork). I used the same
-  template layout and created a new project using SpringBoot.
+This project is a basic social media netwoking website.
 
 ## Functionality
 ### Base
