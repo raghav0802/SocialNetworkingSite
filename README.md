@@ -7,6 +7,7 @@ Base
 
 
 Login / Logout
+
 Register
 View own profile
 View other users profiles
