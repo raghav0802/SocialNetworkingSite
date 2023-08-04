@@ -4,21 +4,36 @@
 Functionality
 
 Base
+
+
 Login / Logout
+
 Register
+
 View own profile
+
 View other users profiles
+
 Send messages
+
 Add and remove friends
+
 Accept and decline friends requests
+
 Update profile information
+
 Change password
+
 Search for other users
+
 View other users friends lists
+
 View last messages
+
 Drag and drop profile image upload
-Internationalization: English and Russian languages
-Localization
+
+
+
 Admin
 Make other user admin
 Block user
