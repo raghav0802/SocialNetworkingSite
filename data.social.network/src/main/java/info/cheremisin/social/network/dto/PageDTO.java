@@ -9,9 +9,7 @@ import lombok.ToString;
 
 import java.util.List;
 
-/**
- * Created by Dmitrii on 03.10.2019.
- */
+
 @Getter
 @Setter
 @Builder
