@@ -36,12 +36,10 @@ This project is a basic social media netwoking website.
 - Thymeleaf
 - Javascript, jQuery
 - Html, CSS, Bootstrap
-- Test: JUnit, Mockito
+
 
 ### Environment
-- Heroku as CD tool
 - Circle CI as CI tool
-- Docker for containerization
 
 
 
