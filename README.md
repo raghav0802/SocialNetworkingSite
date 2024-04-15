@@ -21,7 +21,7 @@ This project is a basic social media netwoking website.
 - View other users friends lists
 - View last messages
 - Drag and drop profile image upload
--
+
 
 ### Admin
 - Make other user admin
