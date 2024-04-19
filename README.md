@@ -33,7 +33,6 @@ This project is a basic social media netwoking website.
 - Spring: SpringBoot, MVC, Data JPA, Security, DevTools, Actuator
 - Maven
 - H2, Mysql
-- Thymeleaf
 - Javascript, jQuery
 - Html, CSS, Bootstrap
 
