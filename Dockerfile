@@ -16,5 +16,8 @@ WORKDIR /app
 
 COPY --from=build /build/web.social.network/target/*.jar app.jar
 
+#  Set the active Spring profile to "docker"
+ENV SPRING_PROFILES_ACTIVE=docker
+
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
