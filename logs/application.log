@@ -3677,3 +3677,60 @@ Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieva
 18:46:42.908 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 18:46:42.920 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 18:46:42.962 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:33:18.384 INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+20:33:18.395 INFO  i.c.s.n.SocialNetworkApplication - Starting SocialNetworkApplication using Java 17.0.2 on LAPTOP-S62Q0KML with PID 1408 (C:\Users\krish\Documents\Projects\SocialNetworkingSite\web.social.network\target\classes started by krish in C:\Users\krish\Documents\Projects\SocialNetworkingSite)
+20:33:18.396 DEBUG i.c.s.n.SocialNetworkApplication - Running with Spring Boot v2.7.18, Spring v5.3.31
+20:33:18.397 INFO  i.c.s.n.SocialNetworkApplication - The following 1 profile is active: "prod"
+20:33:18.520 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+20:33:18.520 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+20:33:20.696 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+20:33:20.874 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 157 ms. Found 4 JPA repository interfaces.
+20:33:22.449 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8084 (http)
+20:33:22.464 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8084"]
+20:33:22.467 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+20:33:22.468 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.83]
+20:33:22.704 INFO  o.a.c.c.C.[.[.[/social-network] - Initializing Spring embedded WebApplicationContext
+20:33:22.704 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4183 ms
+20:33:22.963 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:33:23.328 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:33:23.340 INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/social_network?useSSL=false&serverTimezone=UTC'
+20:33:23.683 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:33:23.822 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+20:33:24.227 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:33:24.532 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+20:33:25.862 DEBUG org.hibernate.SQL - alter table friendship drop foreign key FKlf0nqje9k08cimvk4tsnb2bgg
+20:33:26.013 DEBUG org.hibernate.SQL - alter table friendship drop foreign key FKngs34a7uptf3lmnefiigk1ktd
+20:33:26.029 DEBUG org.hibernate.SQL - alter table messages drop foreign key FK8q4vrb5gjo5j0t8gv51qj3se9
+20:33:26.048 DEBUG org.hibernate.SQL - alter table messages drop foreign key FKelhs6sn3e7n5nhphoiht9jqes
+20:33:26.063 DEBUG org.hibernate.SQL - alter table user_role drop foreign key FKa68196081fvovjhkek5m97n3y
+20:33:26.080 DEBUG org.hibernate.SQL - alter table user_role drop foreign key FK859n2jvi8ivhui0rl0esws6o
+20:33:26.098 DEBUG org.hibernate.SQL - drop table if exists friendship
+20:33:26.134 DEBUG org.hibernate.SQL - drop table if exists messages
+20:33:26.157 DEBUG org.hibernate.SQL - drop table if exists role
+20:33:26.187 DEBUG org.hibernate.SQL - drop table if exists user
+20:33:26.209 DEBUG org.hibernate.SQL - drop table if exists user_role
+20:33:26.233 DEBUG org.hibernate.SQL - create table friendship (id bigint not null auto_increment, accepted bit, user_receiver bigint, user_sender bigint, primary key (id)) engine=InnoDB
+20:33:26.265 DEBUG org.hibernate.SQL - create table messages (id integer not null auto_increment, message varchar(255), time datetime(6), receiver bigint, sender bigint, primary key (id)) engine=InnoDB
+20:33:26.295 DEBUG org.hibernate.SQL - create table role (id bigint not null auto_increment, name varchar(255), primary key (id)) engine=InnoDB
+20:33:26.325 DEBUG org.hibernate.SQL - create table user (id bigint not null auto_increment, date_of_birth date, username varchar(255), first_name varchar(255), image varchar(255), last_name varchar(255), password varchar(255), phone varchar(255), sex integer, primary key (id)) engine=InnoDB
+20:33:26.355 DEBUG org.hibernate.SQL - create table user_role (user_id bigint not null, role_id bigint not null) engine=InnoDB
+20:33:26.384 DEBUG org.hibernate.SQL - alter table user add constraint UK_sb8bbouer5wak8vyiiy4pf2bx unique (username)
+20:33:26.411 DEBUG org.hibernate.SQL - alter table friendship add constraint FKlf0nqje9k08cimvk4tsnb2bgg foreign key (user_receiver) references user (id)
+20:33:26.525 DEBUG org.hibernate.SQL - alter table friendship add constraint FKngs34a7uptf3lmnefiigk1ktd foreign key (user_sender) references user (id)
+20:33:26.626 DEBUG org.hibernate.SQL - alter table messages add constraint FK8q4vrb5gjo5j0t8gv51qj3se9 foreign key (receiver) references user (id)
+20:33:26.707 DEBUG org.hibernate.SQL - alter table messages add constraint FKelhs6sn3e7n5nhphoiht9jqes foreign key (sender) references user (id)
+20:33:26.807 DEBUG org.hibernate.SQL - alter table user_role add constraint FKa68196081fvovjhkek5m97n3y foreign key (role_id) references role (id)
+20:33:26.900 DEBUG org.hibernate.SQL - alter table user_role add constraint FK859n2jvi8ivhui0rl0esws6o foreign key (user_id) references user (id)
+20:33:26.989 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:33:27.007 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+20:33:28.174 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:33:30.222 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@453b4113, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@583b0d46, org.springframework.security.web.context.SecurityContextPersistenceFilter@470a5e86, org.springframework.security.web.header.HeaderWriterFilter@3489ef42, org.springframework.security.web.csrf.CsrfFilter@11831f79, org.springframework.security.web.authentication.logout.LogoutFilter@6b5d00d7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2841760a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@251ec522, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b5dcdce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3f45b09, org.springframework.security.web.session.SessionManagementFilter@6162a352, org.springframework.security.web.access.ExceptionTranslationFilter@3e610406, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26f73c97]
+20:33:30.697 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+20:33:31.521 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+20:33:31.532 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 7 endpoint(s) beneath base path ''
+20:33:31.583 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8084"]
+20:33:31.657 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8084 (http) with context path '/social-network'
+20:33:31.777 INFO  i.c.s.n.SocialNetworkApplication - Started SocialNetworkApplication in 14.45 seconds (JVM running for 15.789)
+21:58:02.310 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+21:58:02.520 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+21:58:02.579 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
